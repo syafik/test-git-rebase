@@ -1,0 +1,7 @@
+<div>
+  <p>Food Id: {{item.id}}</p>
+  <p>Food Name: {{item.name}}</p>
+  <p>Food Description: {{item.description}}</p>
+</div>
+<a class='btn' href="#/items/{{item.id}}/edit">Edit</a>
+<button type="input" class="btn btn-danger" ng-click='remove(item.id)'>Delete</button>

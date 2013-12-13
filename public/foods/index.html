@@ -1,0 +1,22 @@
+<p>Welcome, {{user.email}}  </p>
+
+<a class="btn btn-primary" ng-click="logout()">Logout</a>
+<a class="btn btn-link" href="#/foods/new">New</a>
+
+
+<table class="table table-condensed table-hover">
+  <caption>Foods</caption>
+  <thead>
+  <tr>
+	<th>Name</th>
+	<th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="food in foods">
+	<td><a href="#/foods/{{food.id}}">{{food.name}}</a></td>
+	<td>{{food.description}}</td>
+  </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,17 @@
+development: &development
+  adapter: postgresql
+  database: restaurant_development
+  username: admin
+  password: password
+  host: localhost
+  port: 5432
+  schema_search_path: public
+  min_messages: warning
+
+test:
+  <<: *development
+  database: restaurant_development
+
+production:
+  <<: *development
+  database: restaurant_production

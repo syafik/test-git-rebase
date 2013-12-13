@@ -1,0 +1,21 @@
+<form name="newFoodForm">
+	<fieldset>
+		<legend>New a Article</legend>
+		<label>Name:</label>
+		<input name="foodname" type="text" placeholder="Type the Food Name..." ng-model="food.name" required/>
+		<span ng-show="newFoodForm.foodname.$error.required" class="help-inline">Required</span>
+	    <br />
+
+	    <label>Price:</label>
+		<input name="foodprice" type="number" placeholder="Type the Food Price..." ng-model="food.price" required/>
+		<span ng-show="newFoodForm.foodprice.$error.required" class="help-inline">Required</span>
+	    <br />
+
+		<label>Description:</label>
+	    <textarea class="input-xxlarge" ng-model='food.description'></textarea>
+
+
+	    <div class="clearfix"></div>
+		<button type="submit" class="btn btn-primary" ng-click="create(food)" ng-disabled="newFoodForm.$invalid">Submit</button>
+	</fieldset>
+</form>

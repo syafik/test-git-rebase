@@ -1,0 +1,13 @@
+<form name="editItemForm">
+	<fieldset>
+		<legend>Edit {{master.name}}</legend>
+		<label>Name:<label>
+		<input name="itemname" type="text" placeholder="Enter item name..." ng-model='item.name' required/>
+		<span ng-show="editItemForm.itemname.$error.required" class="help-inline">Required</span>
+		<label>Description:</label>
+		<input class="input-xxlarge" type="text" ng-model='item.description'/>
+		<div class="clearfix"></div>
+		<button type="submit" class="btn btn-primary" ng-click='update(item)' ng-disabled="editItemForm.$invalid">Update Item</button>
+	</fieldset>
+</form>
+<a href="#/items/{{item.id}}">Back</a>
